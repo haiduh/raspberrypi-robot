@@ -1,0 +1,46 @@
+import java.io.IOException;
+import java.util.Scanner;
+import com.hopding.jrpicam.exceptions.FailedToRunRaspistillException;
+import swiftbot.SwiftBotAPI;
+import swiftbot.SwiftBotAPI.ImageSize;
+
+public class SwiftBot {
+	public static void main(String args[]) {
+		
+		/* variables have already been input before so this is just for ease of understanding
+		int IDPlayer1_Lives, IDPlayer2_Lives;
+		int IDPlayer1_Score = 10;
+		int IDPlayer2_Score = 10;
+		this is what I assume the variables look like
+		*/
+		
+		//These are all dummy values
+		
+		int IDPlayer1_Lives = 3, IDPlayer2_Lives = 3; 
+		int totalScorePlayer1 = 10 * IDPlayer1_Lives;
+		int totalScorePlayer2 = 10 * IDPlayer2_Lives;
+		
+		if (totalScorePlayer1 == totalScorePlayer2) {
+			System.out.println("You Both Won! " + "\nLet's take a team picture! " + "\nPress Enter when ready");
+		
+		} else if (totalScorePlayer1 > totalScorePlayer2) {
+			System.out.println("IDPlayer1 is the Winner! " + "\nLet's take a Picture! " + "\nPress Enter to continue ");
+			
+		} else {
+			System.out.println("IDPlayer2 is the Winner! " + "\nLet's take a Picture! " + "\nPress Enter to continue ");
+		 	}
+		
+		Scanner scanner = new Scanner(System.in);
+        String readString = scanner.nextLine(); 
+        
+        SwiftBotAPI API = new SwiftBotAPI();
+        try {
+        API.takeStill("/home/pi/Documents", "testImage", ImageSize.SQUARE_144x144);
+        } catch (IOException | FailedToRunRaspistillException | InterruptedException e) {
+        e.printStackTrace();
+        }
+        
+        SwiftBotAPI API1 = new SwiftBotAPI();
+        API1.startMove(-100, 100);
+        }
+	}
