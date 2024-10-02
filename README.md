@@ -28,6 +28,12 @@ SwiftBot is a smart roaming robot that detects objects and interacts with its su
 - **Red**: Danger (Scaredy mode, too close to an object).
 - **Blinking**: Moving away (Curious mode).
 
+## Eclipse Demo 🎥
+
+
+![eclipse demo](https://github.com/user-attachments/assets/8798750d-0672-4895-9363-80b65022b1ec)
+
+
 ## Code Breakdown 🧑‍💻
 This project is split into four key classes, each handling a different aspect of the SwiftBot’s behavior:
 
@@ -485,14 +491,6 @@ public class Logofexecution {
 
 }
 ```
-
-## Screenshots & GIFs 🎥
-
-### Here is the code being written in Eclipse.
-
-
-![eclipse demo](https://github.com/user-attachments/assets/8798750d-0672-4895-9363-80b65022b1ec)
-
 
 ## Future Enhancements 🚧
 - Integration with AI for smarter object detection.
